@@ -229,6 +229,8 @@ Error message and password prompt
 
 <li>ChrisSmith</li>
 
+<li>ContactInformationTemplate</li>
+
 <li>ContactList</li>
 
 <li>EmilyDoe</li>
@@ -10265,7 +10267,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210528114331512" list="AllContacts ChrisSmith Fudge EmployeeProfileSetupMeeting JaneDoe PhoneNumbers WikipediaLinks2 WikipediaLinks OnboardingProcess" modified="20210528130603069" title="$:/StoryList">
+<div created="20210528114331512" list="ContactInformationTemplate AllContacts ChrisSmith Fudge EmployeeProfileSetupMeeting JaneDoe PhoneNumbers WikipediaLinks2 WikipediaLinks OnboardingProcess" modified="20210528130603069" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10413,6 +10415,20 @@ Bla Bla Bla
 </div>
 <div created="20210519140035771" email="chrissmith@@company.com" modified="20210519140156009" phone="888-555-4321" tags="Contact" title="ChrisSmith">
 <pre></pre>
+</div>
+<div created="20210528130911443" modified="20210528131015098" tags="" title="ContactInformationTemplate">
+<pre>\define getPhone(person)
+{{$person$!!phone}}
+\end
+
+!! Information 
+
+* Emailadress: {{!!email}}
+* Phone Number: {{!!phone}}
+* Manager: {{!!manager}}
+* Familie: {{!!family}}
+
+Manager's phone number is: &lt;$macrocall $name=&quot;getPhone&quot; person={{!!manager}} /&gt;</pre>
 </div>
 <div created="20210520105001994" modified="20210520105652882" tags="" title="ContactList">
 <pre>&lt;$list filter =&quot;[tag[Contact]has[phone]sort[title]]&quot;&gt;
