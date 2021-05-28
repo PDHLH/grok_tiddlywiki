@@ -261,6 +261,8 @@ Error message and password prompt
 
 <li>Varaibelen</li>
 
+<li>WikipediaLinks</li>
+
 </ul>
 </p>
 
@@ -10252,7 +10254,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Varaibelen EmilyDoe ContactList EmployeeInformationSystem [[Really Annoying Five-Factor Authentication Process]] $:/AdvancedSearch OnboardingProcess Fudge OnboardingHr OnboardingPeople" title="$:/StoryList">
+<div list="WikipediaLinks Varaibelen EmilyDoe ContactList EmployeeInformationSystem [[Really Annoying Five-Factor Authentication Process]] $:/AdvancedSearch OnboardingProcess Fudge OnboardingHr OnboardingPeople" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10496,6 +10498,26 @@ JaneDoe taught me about the &lt;&lt;eis&gt;&gt; in our EmployeeProfileSetupMeeti
 
 &lt;/$set&gt;
 &lt;/$set&gt;</pre>
+</div>
+<div created="20210528105711847" modified="20210528114308510" tags="" title="WikipediaLinks">
+<pre>\define
+wikipediaLink(articleName, linkText)
+[[$linkText$|https://en.wikipedia.org/wiki/$articleName$]]
+\end
+
+\define disclaimer()
+(This paragraph does not represent the formal opinion of my company.)
+\end
+
+
+&lt;&lt;wikipediaLink Aardvark &quot;Wikipedia on Aardvark&quot;&gt;&gt;
+
+
+&lt;$set name=&quot;wikipedia&quot; value=&quot;https://en.wikipedia.org/wiki/&quot;&gt;
+    &lt;&lt;wikipedia&gt;&gt;Aardvark
+&lt;/$set&gt;
+
+&lt;&lt;disclaimer&gt;&gt;</pre>
 </div>
 
 
