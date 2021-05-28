@@ -10446,7 +10446,7 @@ JaneDoe taught me about the EIS in our EmployeeProfileSetupMeeting.</pre>
 
 RobertFudge</pre>
 </div>
-<div created="20210519132019411" email="janedoe@company.com" family="JohnDoe EmilyDoe" manager="ChrisSmith" modified="20210528130557304" phone="888-555-1234" tags="Contact" title="JaneDoe">
+<div created="20210519132019411" email="janedoe@company.com" family="JohnDoe EmilyDoe" manager="ChrisSmith" modified="20210528130910073" phone="888-555-1234" tags="Contact" title="JaneDoe">
 <pre>\define getPhone(person)
 {{$person$!!phone}}
 \end
@@ -10462,9 +10462,7 @@ Jane works in the HR department managing the EmployeeInformationSystem and onboa
 * Manager: {{!!manager}}
 * Familie: {{!!family}}
 
-{{ChrisSmith!!phone}}
-
-&lt;&lt;getPh&gt;&gt;</pre>
+Jane's manager's phone number is: &lt;$macrocall $name=&quot;getPhone&quot; person={{!!manager}} /&gt;</pre>
 </div>
 <div created="20210519140143634" email="johndoe@company.com" family="JaneDoe EmilyDoe" manager="ChrisSmith" modified="20210519140300185" phone="888-555-2345" tags="Contact" title="JohnDoe">
 <pre></pre>
