@@ -10476,14 +10476,16 @@ Jane works in the HR department managing the EmployeeInformationSystem and onboa
 <div created="20210519140143634" email="johndoe@company.com" family="JaneDoe EmilyDoe" manager="ChrisSmith" modified="20210519140300185" phone="888-555-2345" tags="Contact" title="JohnDoe">
 <pre></pre>
 </div>
-<div created="20210520104526926" modified="20210530131508585" tags="" title="MeetingList">
+<div created="20210520104526926" modified="20210530131615942" tags="" title="MeetingList">
 <pre>&lt;$list filter=&quot;[tag[Meeting]!sort[at]]&quot;&gt;
   &lt;li&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/li&gt;
 &lt;/$list&gt;
 
 {{{ [tag[Meeting]] }}}
 
-There are  {{{ [tag[Meeting]count[]] }}} meetings in this wiki.</pre>
+There are {{{ [tag[Meeting]count[]] }}} meetings in this wiki.
+
+There are &lt;$text text={{{ [tag[Meeting]count[]] }}}  /&gt; meetings in this wiki.</pre>
 </div>
 <div caption="Aan boord met HR" created="20210519183102190" list="Test2 EmployeeProfileSetupMeeting Test1 Test3" modified="20210520063118622" tags="OnboardingProcess" title="OnboardingHr">
 <pre>&lt;&lt;list-links-draggable&gt;&gt;</pre>
