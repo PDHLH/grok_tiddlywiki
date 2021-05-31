@@ -10209,13 +10209,21 @@ Error message and password prompt
 <div created="20210519125022262" modified="20210519125031390" title="$:/palette">
 <pre>$:/palettes/SolarFlare</pre>
 </div>
-<div created="20210531094117687" modified="20210531094418304" tags="$:/tags/ViewTemplate" title="$:/PDHLH/TiddlerLinkSumary">
-<pre>\define linkDisplay(title, filterFragment)
+<div created="20210531094117687" modified="20210531094539316" tags="$:/tags/ViewTemplate" title="$:/PDHLH/TiddlerLinkSumary">
+<pre>\define excerptify(title)
+  &lt;$wikify name=wikitext text={{$title$}}&gt;
+    &lt;$text text={{{ [&lt;wikitext&gt;split[]first[200]join[]] }}} /&gt;...
+  &lt;/$wikify&gt;
+\end
+
+\define linkDisplay(title, filterFragment)
 $title$:
 
 &lt;ul&gt;
 &lt;$list filter=&quot;[all[current]$filterFragment$]&quot;&gt;
-  &lt;li&gt;&lt;$link /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;$link to=&lt;&lt;currentTiddler&gt;&gt;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$link&gt;: &lt;$macrocall $name=excerptify title={{!!title}}/&gt;
+  &lt;/li&gt;
 &lt;/$list&gt;
 &lt;/ul&gt;
 \end
@@ -10298,7 +10306,7 @@ $title$:
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210531094237724" list="$:/PDHLH/TiddlerLinkSumary" modified="20210531094313182" title="$:/StoryList">
+<div created="20210531094237724" list="JaneDoe $:/PDHLH/TiddlerLinkSumary" modified="20210531094422643" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
